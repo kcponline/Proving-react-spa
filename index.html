@@ -45,9 +45,12 @@
 		});
 
 		ReactDOM.render(
-			<div>
-				<App/>
-			</div>,
+			<ReactRouter.Router history={ReactRouter.hashHistory}>
+				<ReactRouter.Router path="/" component={App}>
+
+
+				</ReactRouter.Router>
+			</ReactRouter.Router>,
 			destination
 			);
 	</script>
