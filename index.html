@@ -29,7 +29,7 @@
 		var App = React.createClass({
 			render: function(){
 				return(
-					<div>
+					<div className="appFrame" style={{background: 'lightblue'}}>
 						<h1>Simple SPA</h1>
 						<ul className="header">
 							<li>Home</li>
@@ -37,7 +37,7 @@
 							<li>Contact</li>
 						</ul>
 						<div className="content">
-
+							<p>this is the static app frame which is now rendered by the "/" route in ReactDOM</p>
 						</div>
 					</div>
 				)
