@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>
-		React SPA! branch 1
+		React SPA! branch 1a
 	</title>
 	<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
 	<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
@@ -26,6 +26,24 @@
 	<script type="text/babel">
 		var destination = document.querySelector("#container");
 
+		var Home = React.createClass({
+		  render: function() {
+		      return (
+		        <div style={{background: 'lightpink'}}>
+		          <h2>HELLO</h2>
+		          <p>Cras facilisis urna ornare ex volutpat, et
+		          convallis erat elementum. Ut aliquam, ipsum vitae
+		          gravida suscipit, metus dui bibendum est, eget rhoncus nibh
+		          metus nec massa. Maecenas hendrerit laoreet augue
+		          nec molestie. Cum sociis natoque penatibus et magnis
+		          dis parturient montes, nascetur ridiculus mus.</p>
+		  
+		          <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+		        </div>
+		      );
+		    }
+		});
+
 		var App = React.createClass({
 			render: function(){
 				return(
@@ -37,7 +55,10 @@
 							<li>Contact</li>
 						</ul>
 						<div className="content">
+							<Home/>
 							<p>this is the static app frame which is now rendered by the "/" route in ReactDOM</p>
+							<p>now, the Home component in pink is added as child to this App parent component</p>
+							<p>however, the Home component is actually statically hard-coded and not dynamic to user interaction</p>
 						</div>
 					</div>
 				)
