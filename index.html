@@ -57,6 +57,13 @@
 	</div>
 
 	<script type="text/babel">
+		var { Router,
+	      Route,
+	      IndexRoute,
+	      IndexLink,
+	      hashHistory,
+	      Link } = ReactRouter;
+
 		var destination = document.querySelector("#container");
 
 		var Home = React.createClass({
@@ -99,12 +106,12 @@
 		});
 
 		ReactDOM.render(
-			<ReactRouter.Router history={ReactRouter.hashHistory}>
-				<ReactRouter.Router path="/" component={App}>
+			<Router history={hashHistory}>
+				<Route path="/" component={App}>
 
 
-				</ReactRouter.Router>
-			</ReactRouter.Router>,
+				</Route>
+			</Router>,
 			destination
 			);
 	</script>
